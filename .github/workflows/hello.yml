@@ -6,3 +6,7 @@ jobs:
     steps:
       - run: echo "Hello, world"
       - uses: actions/checkout@v4
+  print:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "${{ github.actor }}"
