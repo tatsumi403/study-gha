@@ -1,4 +1,4 @@
-name: Generate functons
+name: Generate functions
 on: push
 jobs:
   generate:
@@ -6,6 +6,6 @@ jobs:
     steps:
       - run: printenv | grep '_FUNC'
         env:
-          FORMAT_FUNC: ${{ format('{0}', {1}.', 'Hi', 'world') }}
-          JOIN_FUNC: ${{ join(github.event.*.html_url, ',') }}
+          FORMAT_FUNC: ${{ format('{0}, {1}.', 'Hi', 'world') }}
+          JOIN_FUNC: ${{ join(github.event.*.html_url, ', ') }}
     
