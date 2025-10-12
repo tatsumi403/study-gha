@@ -12,7 +12,7 @@ jobs:
       - run: exit 1
       - run: echo "Hello"
         if: ${{ failure() }}
-  skip-or-run:
+  check-before-job:
     if: ${{ github.actor == 'octocat' }}
     runs-on: ubuntu-latest
     step:
