@@ -13,7 +13,7 @@ jobs:
       - run: echo "Hello"
         if: ${{ failure() }}
   check-before-job:
-    if: ${{ github.actor == 'octocat' }}
+    if: ${{ github.actor == 'tatsumi403' }}
     runs-on: ubuntu-latest
     steps:
       - run: echo "Hello"
