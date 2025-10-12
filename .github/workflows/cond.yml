@@ -15,5 +15,5 @@ jobs:
   check-before-job:
     if: ${{ github.actor == 'octocat' }}
     runs-on: ubuntu-latest
-    step:
+    steps:
       - run: echo "Hello"
