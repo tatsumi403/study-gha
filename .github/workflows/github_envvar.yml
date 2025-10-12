@@ -1,0 +1,18 @@
+name: GITHUB_OUTPUT/ENV
+on: push
+jobs:
+  github_output:
+    runs-on: ubuntu-latest
+    steps:
+      - id: kuroda
+        run: echo "result=Hello" >> "${GITHUB_OUTPUT}"
+      - env:
+          RESULT: ${{ steps.kuroda.outputs.result }}
+        run: echo "${RESULT}"
+  # ステップIDの指定不要なのでステップ間の依存関係がわかりづらくなる
+  # バグの温床になるので特にこだわりがない場合はOUTPUTを使用する
+  github_env:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "RESULT=hello" >> "${GITHUB_ENV}"
+      - run: echo "${RESULT}"
