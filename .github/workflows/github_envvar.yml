@@ -1,5 +1,5 @@
 name: GITHUB_OUTPUT/ENV
-on: push
+on: workflow_dispatch
 jobs:
   github_output:
     runs-on: ubuntu-latest
