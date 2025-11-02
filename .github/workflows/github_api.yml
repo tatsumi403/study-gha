@@ -8,6 +8,6 @@ jobs:
       contents: read # ソースコードの読み込みは記載しなければ暗黙的に許可される
     steps:
       - uses: actions/checkout@v4
-      - run: gh pr comment "${GITHUB_HEAD_REF}" --body "Hello, ${GITHUB_ACTOR}"
+      - run: gh pr comment "${GITHUB_HEAD_REF}" --body "Hello, ${GITHUB_ACTOR} by .github/workflows/github_api.yml"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
